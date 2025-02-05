@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html class="h-full" data-theme="true" data-theme-mode="light" lang="en">
+  <head>
+    <base href="">
+    <title>Company - Kurumsal Uygulamalar</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="main-page.html" property="og:url" />
+    <meta content="en_US" property="og:locale" />
+    <meta content="website" property="og:type" />
+    <meta content="" property="og:description" />
+    <link href="random-logo.avif" rel="shortcut icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="assets/vendors/apexcharts/apexcharts.css" rel="stylesheet" />
+    <link href="assets/vendors/keenicons/styles.bundle.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+  </head>
+  <body class="antialiased flex h-full text-base text-gray-700 [--tw-page-bg-dark:var(--tw-coal-500)] [--tw-header-height:78px] [--tw-navbar-bg:var(--tw-secondary-active)] [--tw-navbar-bg-dark:var(--tw-coal-300)] bg-light dark:bg-coal-500">
+    <!-- Theme Mode -->
+    <script>
+      const defaultThemeMode = 'light'; // light|dark|system
+      let themeMode;
+      if (document.documentElement) {
+        if (localStorage.getItem('theme')) {
+          themeMode = localStorage.getItem('theme');
+        } else if (document.documentElement.hasAttribute('data-theme-mode')) {
+          themeMode = document.documentElement.getAttribute('data-theme-mode');
+        } else {
+          themeMode = defaultThemeMode;
+        }
+        if (themeMode === 'system') {
+          themeMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.classList.add(themeMode);
+      }
+    </script>
+    <!-- End of Theme Mode -->
+    <!-- Page -->
+    <!-- Main -->
+    <div class="flex grow flex-col [[data-sticky-header=on]_&amp;]:pt-[--tw-header-height]">
+      <!-- Header -->
+      <header class="flex items-center transition-[height] shrink-0 bg-[--tw-header-bg] dark:bg-coal-500 h-[--tw-header-height]" data-sticky="true" data-sticky-class="transition-[height] fixed z-10 top-0 left-0 right-0 shadow-sm backdrop-blur-md bg-white/70 dark:bg-coal-500/70 dark:border-b dark:border-b-light" data-sticky-name="header" data-sticky-offset="100px" id="header">
+        <!-- Container -->
+        <div class="container-fixed flex lg:justify-between items-center gap-2.5">
+          <!-- Logo -->
+          <div class="flex items-center gap-1 lg:w-[400px] grow lg:grow-0">
+            <div class="flex items-center">
+              <a href="main-page.html">
+                <img class="dark:hidden pr-4 h-12 min-h-[16px]" src="random-logo.avif" />
+                <img class="hidden dark:inline-block min-h-[16px] max-h-[75px] max-w-[75px] mr-6" src="random-logo.avif" />
+              </a>
+              <a href="main-page.html">
+                <h3 class="text-gray-900 text-lg font-medium md:block"> Company </h3>
+              </a>
+            </div>
+            <!-- Navs -->
+            <div class="hidden lg:flex items-center">
+              <div class="border-e border-gray-200 h-5 mx-4"></div>
+              <!-- Nav -->
+              <div class="menu menu-default" data-menu="true">
+                <div class="menu-item" data-menu-item-offset="0, 10px" data-menu-item-placement="bottom-start" data-menu-item-toggle="dropdown" data-menu-item-trigger="hover">
+                  <button class="menu-toggle text-gray-900 text-sm font-medium"> Uygulamalar <span class="menu-arrow">
+                      <i class="ki-filled ki-down"></i>
+                    </span>
+                  </button>
+                  <div class="menu-dropdown w-48 py-2">
+                    <div class="menu-item">
+                      <a class="menu-link" href="main-page.html" tabindex="0">
+                        <span class="menu-icon">
+                          <i class="ki-filled ki-flask"></i>
+                        </span>
+                        <span class="menu-title"> Kimya </span>
+                      </a>
+                    </div>
+                    <div class="menu-item">
+                      <a class="menu-link" href="main-page.html" tabindex="0">
+                        <span class="menu-icon">
+                          <i class="ki-filled ki-electricity"></i>
+                        </span>
+                        <span class="menu-title"> Elektronik </span>
+                      </a>
+                    </div>
+                    <div class="menu-item">
+                      <a class="menu-link" href="main-page.html" tabindex="0">
+                        <span class="menu-icon">
+                          <i class="ki-filled ki-car"></i>
+                        </span>
+                        <span class="menu-title"> Otomotiv </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Nav -->
+            </div>
+            <div class="border-e border-gray-200 h-5 mx-4"></div>
+            <!--Quick Access Bar-->
+            <div class="flex items-center gap-2">
+              <a href="#navbar">
+                <i class="ki-filled ki-up"></i>
+              </a>
+            </div>
+            <!--End of Quick Access Bar-->
+            <!-- End of Navs -->
+          </div>
+          <!-- End of Logo -->
+          <!-- Topbar -->
+          <div class="flex items-center gap-2 lg:gap-3.5 lg:w-[400px] justify-end" id="top-bar">
+            <div class="flex items-center gap-2 me-0.5">
+              <div class="dropdown" data-dropdown="true" data-dropdown-offset="-7px, 10px" data-dropdown-placement="bottom-end" data-dropdown-trigger="click|lg:click">
+                <button class="dropdown-toggle btn btn-icon btn-icon-base btn-sm text-gray-600 hover:text-primary dropdown-open:text-primary">
+                  <i class="ki-solid ki-notification-on"></i>
+                </button>
+                <div class="dropdown-content light:border-gray-300 w-full max-w-[460px]">
+                  <div class="flex items-center justify-between gap-2.5 text-sm text-gray-900 font-semibold px-5 py-2.5 border-b border-b-gray-200" id="notifications_header"> Bildirimler <button class="btn btn-sm btn-icon btn-light btn-clear shrink-0" data-dropdown-dismiss="true">
+                      <i class="ki-filled ki-cross"></i>
+                    </button>
+                  </div>
+                  <div class="grow" id="notification_tab">
+                    <div class="flex flex-col">
+                      <div class="scrollable-y-auto" data-scrollable="true" data-scrollable-dependencies="#header" data-scrollable-max-height="auto" data-scrollable-offset="200px">
+                        <div class="flex flex-col gap-5 pt-3 pb-4 divider-y divider-gray-200">
+                          <div class="flex grow gap-2.5 px-5">
+                            <div class="flex flex-col gap-3.5">
+                              <div class="flex flex-col gap-1">
+                                <div class="text-2sm font-medium">
+                                  <a class="hover:text-primary text-gray-900 font-semibold" href="#satin-alim"> Yeni kayıt eklendi </a>
+                                </div>
+                                <span class="flex items-center text-2xs font-medium text-gray-500"> 20 dakika önce </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="border-b border-b-gray-200"></div>
+                          <div class="flex grow gap-2.5 px-5">
+                            <div class="flex flex-col gap-3.5">
+                              <div class="flex flex-col gap-1">
+                                <div class="text-2sm font-medium mb-px">
+                                  <span class="text-primary font-semibold uppercase"> Kurutma Kule Gövdesi, </span>
+                                  <span class="text-gray-800 font-semibold uppercase"> DHM MÜHENDİSLİK </span>
+                                  <span class="text-gray-700"> tedarikçisi için </span>
+                                  <a class="hover:text-primary-active text-gray-900" href="#tamamlanan"> süreç tamamlandı </a>
+                                </div>
+                                <span class="flex items-center text-2xs font-medium text-gray-500"> 40 dakika önce </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="border-b border-b-gray-200"></div>
+                          <div class="flex grow gap-2.5 px-5" id="notification_request_3">
+                            <div class="flex flex-col gap-3.5">
+                              <div class="flex flex-col gap-1">
+                                <div class="text-2sm font-medium mb-px">
+                                  <a class="hover:text-primary-active text-gray-900 font-semibold" href="#satin-alim"> Yeni kayıt eklendi </a>
+                                </div>
+                                <span class="flex items-center text-2xs font-medium text-gray-500"> 2 saat önce </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="border-b border-b-gray-200"></div>
+                          <div class="flex grow gap-2.5 px-5">
+                            <div class="flex flex-col gap-3.5 grow">
+                              <div class="flex flex-col gap-1">
+                                <div class="text-2sm font-medium mb-px">
+                                  <span class="text-primary font-semibold uppercase"> Tartım Sistemleri Donanımı, </span>
+                                  <span class="text-gray-800 font-semibold uppercase"> BULUT MAKİNA </span>
+                                  <span class="text-gray-700"> tedarikçisi için </span>
+                                  <a class="hover:text-primary-active text-gray-900" href="#tamamlanan"> süreç tamamlandı </a>
+                                </div>
+                                <span class="flex items-center text-2xs font-medium text-gray-500"> 40 dakika önce </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="border-b border-b-gray-200"></div>
+                          <div class="flex grow gap-2.5 px-5">
+                            <div class="flex flex-col gap-1">
+                              <div class="text-2sm font-medium mb-px">
+                                <a class="hover:text-primary-active text-gray-900 font-semibold" href="#satin-alim"> Yeni kayıt eklendi </a>
+                              </div>
+                              <span class="flex items-center text-2xs font-medium text-gray-500"> 2 gün önce </span>
+                            </div>
+                          </div>
+                          <div class="border-b border-b-gray-200"></div>
+                          <div class="flex grow gap-2.5 px-5">
+                            <div class="flex flex-col gap-3.5 grow">
+                              <div class="flex flex-col gap-1">
+                                <div class="text-2sm font-medium mb-px">
+                                  <a class="hover:text-primary-active text-gray-900 font-semibold" href="#satin-alim"> Yeni kayıt eklendi </a>
+                                </div>
+                                <span class="flex items-center text-2xs font-medium text-gray-500"> 5 gün önce </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="border-b border-b-gray-200"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="menu" data-menu="true">
+                <div class="menu-item" data-menu-item-offset="-7px, 10px" data-menu-item-placement="bottom-end" data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
+                  <button class="menu-toggle btn btn-icon btn-icon-base btn-sm text-gray-600 hover:text-primary dropdown-open:text-primary">
+                    <i class="ki-filled ki-profile-circle"></i>
+                  </button>
+                  <div class="menu-dropdown menu-default light:border-gray-300 w-screen max-w-[250px]">
+                    <div class="flex items-center justify-between px-3 py-1.5 gap-1.5">
+                      <div class="flex items-center gap-2">
+                        <img class="size-9 rounded-full" src="profile.jpg">
+                        <div class="flex flex-col gap-1.5">
+                          <span class="text-sm text-gray-800 font-semibold leading-none"> Master Admin </span>
+                          <a class="text-xs text-gray-600 hover:text-primary font-medium leading-none" href="user-profile.html"> masteradmin@company.com.tr </a>
+                        </div>
+                        </img>
+                      </div>
+                    </div>
+                    <div class="menu-separator"></div>
+                    <div class="flex flex-col">
+                      <div class="menu-item mb-0.5">
+                        <div class="menu-link">
+                          <span class="menu-icon">
+                            <i class="ki-filled ki-moon"></i>
+                          </span>
+                          <span class="menu-title"> Koyu Tema </span>
+                          <label class="switch switch-sm">
+                            <input data-theme-state="dark" data-theme-toggle="true" name="check" type="checkbox" value="1" />
+                          </label>
+                        </div>
+                      </div>
+                      <div class="menu-item px-4 py-1.5">
+                        <a class="btn btn-sm btn-light justify-center" href="sign-in.html"> Çıkış yap </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu" data-menu="true">
+              <div class="menu-item" data-menu-item-offset="0, 10px" data-menu-item-placement="bottom-end" data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
+                <button class="menu-toggle btn btn-sm btn-dark"> Master Admin <i class="ki-filled ki-down"></i>
+                </button>
+                <div class="menu-dropdown menu-default w-full max-w-[200px]" data-menu-dismiss="true">
+                  <div class="menu-item">
+                    <a class="menu-link" href="user-profile.html">
+                      <span class="menu-icon">
+                        <i class="ki-filled ki-profile-circle"></i>
+                      </span>
+                      <span class="menu-title"> Profilim </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of Topbar -->
+        </div>
+        <!-- End of Container -->
+      </header>
+      <!-- End of Header -->
+      <!-- Navbar -->
+      <div class="bg-[--tw-navbar-bg] dark:bg-[--tw-navbar-bg-dark] hidden lg:flex lg:items-stretch border-y border-gray-300 dark:border-t-light dark:border-light mb-5 lg:mb-8" data-drawer="true" data-drawer-class="drawer drawer-start fixed z-10 top-0 bottom-0 w-full mr-5 max-w-[250px] p-5 lg:p-0 overflow-auto" data-drawer-enable="true|lg:false" id="navbar">
+        <!-- Container -->
+        <div class="container-fixed flex flex-wrap justify-between items-center gap-2 px-0 lg:px-7.5">
+          <!-- Mega Menu -->
+          <div class="menu items-stretch flex-col lg:flex-row gap-5 lg:gap-7.5 grow lg:grow-0" data-menu="true" id="mega_menu">
+            <div class="menu-item active">
+              <a class="menu-link lg:py-3.5 menu-item-active:border-b-gray-800 text-gray-800 menu-item-hover:text-gray-900 menu-item-active:text-gray-900 menu-item-here:border-b-gray-800 menu-item-here:text-gray-900" href="main-page.html">
+                <span class="menu-title font-medium text-gray-800 text-sm"> Anasayfa </span>
+              </a>
+            </div>
+            <div class="menu-item active">
+              <a class="menu-link lg:py-3.5 menu-item-active:border-b-gray-800 text-gray-800 menu-item-hover:text-gray-900 menu-item-active:text-gray-900 menu-item-here:border-b-gray-800 menu-item-here:text-gray-900" href="#satin-alim">
+                <span class="menu-title font-medium text-gray-800 text-sm"> Tüm Kayıtlar </span>
+              </a>
+            </div>
+            <div class="menu-item active">
+              <a class="menu-link lg:py-3.5 menu-item-active:border-b-gray-800 text-gray-800 menu-item-hover:text-gray-900 menu-item-active:text-gray-900 menu-item-here:border-b-gray-800 menu-item-here:text-gray-900" href="#tamamlanan">
+                <span class="menu-title font-medium text-gray-800 text-sm"> Tamamlanan </span>
+              </a>
+            </div>
+            <div class="menu-item active">
+              <a class="menu-link lg:py-3.5 menu-item-active:border-b-gray-800 text-gray-800 menu-item-hover:text-gray-900 menu-item-active:text-gray-900 menu-item-here:border-b-gray-800 menu-item-here:text-gray-900" href="#devam-eden">
+                <span class="menu-title font-medium text-gray-800 text-sm"> Devam Eden </span>
+              </a>
+            </div>
+            <div class="menu-item active">
+              <a class="menu-link lg:py-3.5 menu-item-active:border-b-gray-800 text-gray-800 menu-item-hover:text-gray-900 menu-item-active:text-gray-900 menu-item-here:border-b-gray-800 menu-item-here:text-gray-900" href="#yenikayit">
+                <span class="menu-title font-medium text-gray-800 text-sm"> Yeni Kayıt </span>
+              </a>
+            </div>
+            <div class="menu-item active">
+              <a class="menu-link lg:py-3.5 menu-item-active:border-b-gray-800 text-gray-800 menu-item-hover:text-gray-900 menu-item-active:text-gray-900 menu-item-here:border-b-gray-800 menu-item-here:text-gray-900" href="main-page.html">
+                <span class="menu-title font-medium text-gray-800 text-sm"> Destek </span>
+              </a>
+            </div>
+          </div>
+          <!-- End of Mega Menu -->
+        </div>
+        <!-- End of Container -->
+      </div>
+      <!-- End of Navbar -->
+      <!-- Wrapper Container-->
+      <div class="container-fixed w-full flex px-0">
+        <!-- Content -->
+        <main class="flex flex-col grow" id="content" role="content">
+          <!-- Toolbar -->
+          <div class="mb-5 lg:mb-7.5">
+            <!-- Container -->
+            <div class="container-fixed flex items-center justify-between flex-wrap gap-5">
+              <div class="flex flex-col justify-center items-start flex-wrap gap-1 lg:gap-2">
+                <div class="input input-sm w-[36px] lg:w-60">
+                  <i class="ki-filled ki-magnifier"></i>
+                  <input class="min-w-0" placeholder="Arama | sat, sas, başlık" type="text" value="" />
+                </div>
+              </div>
+              <div class="flex items-center flex-wrap gap-1.5 lg:gap-3.5">
+                <div class="menu menu-default" data-menu="true">
+                  <div class="menu-item" data-menu-item-offset="0, 0" data-menu-item-placement="bottom-end" data-menu-item-toggle="dropdown" data-menu-item-trigger="hover">
+                    <button class="menu-toggle btn btn-light btn-sm flex-nowrap">
+                      <span class="flex items-center me-1">
+                        <i class="ki-filled ki-calendar !text-md"></i>
+                      </span>
+                      <span class="hidden md:inline text-nowrap"> Eylül, 2024 </span>
+                      <span class="inline md:hidden text-nowrap"> Eylül, 2024 </span>
+                      <span class="flex items-center lg:ms-4">
+                        <i class="ki-filled ki-down !text-xs"></i>
+                      </span>
+                    </button>
+                    <div class="menu-dropdown w-48 py-2 scrollable-y max-h-[250px]">
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Ocak, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Şubat, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Mart, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Nisan, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Mayıs, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Haziran, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Temmuz, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Ağustos, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item active">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Eylül, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Ekim, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Kasım, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Aralık, 2024 </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of Container -->
+          </div>
+          <!-- End of Toolbar -->
+          <!-- Container -->
+          <div class="container-fixed">
+            <div class="grid gap-5 lg:gap-7.5">
+              <!-- begin: grid -->
+              <div class="grid lg:grid-cols-3 gap-5 lg:gap-7.5">
+                <div class="lg:col-span-2">
+                  <div class="grid grid-cols-2 gap-4 h-full">
+                    <div class="card card-grid h-full w-full">
+                      <div class="card-body flex justify-center items-center h-full">
+                        <div id="radialChart" class="w-full h-full"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="card card-grid h-full w-full">
+                        <div class="card-body flex justify-center items-center h-full">
+                          <div id="percentageChart" class="w-full h-1/2"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lg:col-span-1 w-full h-full flex flex-col">
+                  <div class="pl-1 flex flex-col justify-around h-full w-full">
+                    <div class="card border rounded-lg flex items-center justify-center py-4 gap-2.5 mb-2 w-full">
+                      <div class="flex flex-col justify-center gap-1.5">
+                        <span class="leading-none font-medium text-base text-primary-active"> Toplam Başvuru Tutarı </span>
+                        <div class="flex items-baseline justify-center text-sm text-gray-700">
+                          <span> 201.684.500,00 </span>
+                          <span class="ml-1"> ₺ </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card border rounded-lg flex items-center justify-center py-4 gap-2.5 mb-2 w-full">
+                      <div class="flex flex-col justify-center gap-1.5">
+                        <span class="leading-none font-medium text-base text-gray-700">
+                          <span class="text-brand"> Hedef </span>
+                          <span class="inline-flex items-center bg-brand-light text-brand text-base font-medium ml-2 px-2 py-0.5 rounded">
+                            <i class="ki-outline ki-arrow-down bg-brand-light text-lg ml-1"></i> % 28 </span>
+                        </span>
+                        <div class="flex items-baseline text-sm justify-center text-gray-700">
+                          <span> 201.684.500,00 </span>
+                          <span class="ml-1"> ₺ </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card border rounded-lg flex items-center justify-center py-4 gap-2.5 w-full">
+                      <div class="flex flex-col justify-center gap-1.5">
+                        <span class="leading-none font-medium text-base text-success"> Gerçekleşen </span>
+                        <div class="flex items-baseline text-sm justify-center text-gray-700">
+                          <span> 30.455.386,40 </span>
+                          <span class="ml-1"> ₺ </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- begin: graph script -->
+              <script>
+                var options1 = {
+                  series: [79, 35, 44],
+                  chart: {
+                    height: 390,
+                    type: 'radialBar',
+                  },
+                  plotOptions: {
+                    radialBar: {
+                      offsetY: 0,
+                      startAngle: 0,
+                      endAngle: 270,
+                      hollow: {
+                        margin: 5,
+                        size: '20%',
+                        background: 'transparent',
+                        image: undefined,
+                      },
+                      dataLabels: {
+                        name: {
+                          show: false,
+                        },
+                        value: {
+                          show: false,
+                        }
+                      },
+                      barLabels: {
+                        enabled: true,
+                        useSeriesColors: true,
+                        offsetX: -8,
+                        fontSize: '16px',
+                        formatter: function(seriesName, opts) {
+                          return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex]
+                        },
+                      },
+                    }
+                  },
+                  colors: ['#056EE9', '#17C653', '#FF6F1E'],
+                  labels: ['Tüm Kayıtlar', 'Tamamlanan', 'Devam Eden'],
+                  responsive: [{
+                    breakpoint: 480,
+                    options: {
+                      legend: {
+                        show: false
+                      }
+                    }
+                  }]
+                };
+                var chart1 = new ApexCharts(document.querySelector("#radialChart"), options1);
+                chart1.render();
+                var options2 = {
+                  series: [28],
+                  chart: {
+                    height: 350,
+                    type: 'radialBar',
+                    offsetY: -10
+                  },
+                  plotOptions: {
+                    radialBar: {
+                      startAngle: -135,
+                      endAngle: 135,
+                      dataLabels: {
+                        name: {
+                          fontSize: '16px',
+                          color: '#17C653',
+                          offsetY: 120
+                        },
+                        value: {
+                          offsetY: 76,
+                          fontSize: '22px',
+                          color: '#4B56751',
+                          formatter: function(val) {
+                            return "%" + val;
+                          }
+                        }
+                      }
+                    }
+                  },
+                  fill: {
+                    type: 'gradient',
+                    gradient: {
+                      shade: 'dark',
+                      shadeIntensity: 0.15,
+                      inverseColors: false,
+                      opacityFrom: 1,
+                      opacityTo: 1,
+                      stops: [0, 50, 65, 91]
+                    },
+                    colors: ['#17C653']
+                  },
+                  stroke: {
+                    dashArray: 4
+                  },
+                  labels: ['Bütçe İçinde'],
+                };
+                var chart2 = new ApexCharts(document.querySelector("#percentageChart"), options2);
+                chart2.render();
+              </script>
+              <!-- end: graph script -->
+              <!-- end: grid -->
+              <!-- begin: grid -->
+              <div id="satin-alim" class="grid lg:grid-cols-3 lg:gap-2 items-stretch">
+                <div class="lg:col-span-3">
+                  <div class="card h-full w-full">
+                    <div class="card-body px-5 pt-5">
+                      <div class="flex flex-col justify-center gap-7">
+                        <h1 class="font-bold text-gray-600 text-xl border-b border-b-gray-200 px-3 pt-3 card-title">Satın Alım Listesi</h1>
+                        <div class="table-container container mx-auto px-3">
+                          <table id="baslikTable" class="w-full border-collapse mb-5">
+                            <thead>
+                              <tr class="text-left bg-gray-200 text-md text-gray-600">
+                                <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                <th class="px-4 py-3 uppercase font-semibold">BAŞLIK</th>
+                                <th class="px-4 py-3 uppercase font-semibold">BAŞVURU MİK.</th>
+                                <th class="px-4 py-3 uppercase font-semibold">GERÇEKLEŞEN MİK.</th>
+                                <th class="px-4 py-3"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr data-id="1" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">1</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(1)">
+                                  <i class="ki-filled ki-abstract-18 text-primary text-base text-base mr-2 fw-bolder"></i> TARTIM SİSTEMLERİ DONANIMI
+                                </td>
+                                <td class="px-4 py-3 uppercase">5/ADET</td>
+                                <td class="px-4 py-3 uppercase">5</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(1)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-1" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse bg-white shadow-md">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">SİGMA</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100000031</td>
+                                        <td class="px-4 py-3 uppercase">401,000.00</td>
+                                        <td class="px-4 py-3 uppercase">474,059.51</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="#kayit-tartim-sigma">DETAY</a>
+                                        </td>
+                                      </tr>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">2</td>
+                                        <td class="px-4 py-3 uppercase">BULUT MAKİNA</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100000032</td>
+                                        <td class="px-4 py-3 uppercase">352,000.00</td>
+                                        <td class="px-4 py-3 uppercase">362,000.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">3</td>
+                                        <td class="px-4 py-3 uppercase">DELTA TEKNOLOJİ</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100000033</td>
+                                        <td class="px-4 py-3 uppercase">450,000.00</td>
+                                        <td class="px-4 py-3 uppercase">480,000.00</td>
+                                        <td class="px-4 py-3 uppercase">SOS SİSTEMİNDE</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="2" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">2</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(2)">
+                                  <i class="ki-filled ki-abstract-18 text-primary text-base mr-2 fw-bolder"></i> KURUTMA KULE GÖVDESİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">2/SET</td>
+                                <td class="px-4 py-3 uppercase">1</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(2)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-2" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="bg-gray-100 text-left text-base">
+                                        <th class="px-4 py-3 font-semibold uppercase">NO</th>
+                                        <th class="px-4 py-3 font-semibold uppercase">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 font-semibold uppercase">FATURA NO</th>
+                                        <th class="px-4 py-3 font-semibold uppercase">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 font-semibold uppercase">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 font-semibold uppercase">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">DHM MÜHENDİSLİK</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100000087</td>
+                                        <td class="px-4 py-3 uppercase">130,000.00</td>
+                                        <td class="px-4 py-3 uppercase">117,475.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">2</td>
+                                        <td class="px-4 py-3 uppercase">OMEGA MÜHENDİSLİK</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100000088</td>
+                                        <td class="px-4 py-3 uppercase">140,000.00</td>
+                                        <td class="px-4 py-3 uppercase">190,000.00</td>
+                                        <td class="px-4 py-3 uppercase">SOS SİSTEMİNDE</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="3" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">3</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(3)">
+                                  <i class="ki-filled ki-abstract-18 text-primary text-base mr-2 fw-bolder"></i> TARTIM ÜNİTESİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">6/ADET</td>
+                                <td class="px-4 py-3 uppercase">6</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(3)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-3" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="bg-gray-100 text-left text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">GAMA MÜHENDİSLİK</td>
+                                        <td class="px-4 py-3 uppercase">GIB202111110097</td>
+                                        <td class="px-4 py-3 uppercase">137,000.00</td>
+                                        <td class="px-4 py-3 uppercase">115,475.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">2</td>
+                                        <td class="px-4 py-3 uppercase">BETA MÜHENDİSLİK</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100258568</td>
+                                        <td class="px-4 py-3 uppercase">157,000.00</td>
+                                        <td class="px-4 py-3 uppercase">160,000.00</td>
+                                        <td class="px-4 py-3 uppercase">SOS SİSTEMİNDE</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="4" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">4</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(4)">
+                                  <i class="ki-solid ki-check text-success text-base mr-2 fw-bolder"></i> TOZ ÜRETİM KULE NOZUL SİSTEMİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">7/SET</td>
+                                <td class="px-4 py-3 uppercase">6</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(4)">DETAY</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-4" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="bg-gray-100 text-left text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">KAPA PASLANMAZ</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100220207</td>
+                                        <td class="px-4 py-3 uppercase">168,000.00</td>
+                                        <td class="px-4 py-3 uppercase">115,485.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">OTOMOTİV A.Ş.</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100220009</td>
+                                        <td class="px-4 py-3 uppercase">550,000.00</td>
+                                        <td class="px-4 py-3 uppercase">620,000.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="5" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">5</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(5)">
+                                  <i class="ki-solid ki-check text-success text-base mr-2 fw-bolder"></i> KONTROL PANELİ SİSTEMLERİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">2/ADET</td>
+                                <td class="px-4 py-3 uppercase">1</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(5)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-5" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">KONT A.Ş.</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100070013</td>
+                                        <td class="px-4 py-3 uppercase">300,000.00</td>
+                                        <td class="px-4 py-3 uppercase">310,040.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="6" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">6</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(6)">
+                                  <i class="ki-filled ki-abstract-18 text-primary text-base mr-2 fw-bolder"></i> SENSÖR SİSTEMLERİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">8/ADET</td>
+                                <td class="px-4 py-3 uppercase">8</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(6)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-6" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">TEKNİK ELEKTRİK</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100008015</td>
+                                        <td class="px-4 py-3 uppercase">500,000.00</td>
+                                        <td class="px-4 py-3 uppercase">510,000.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">2</td>
+                                        <td class="px-4 py-3 uppercase">SENSÖR TEKNOLOJİ</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100000416</td>
+                                        <td class="px-4 py-3 uppercase">650,000.00</td>
+                                        <td class="px-4 py-3 uppercase">630,000.00</td>
+                                        <td class="px-4 py-3 uppercase">SOS SİSTEMİNDE</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="7" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">7</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(7)">
+                                  <i class="ki-filled ki-abstract-18 text-primary text-base mr-2 fw-bolder"></i> ENERJİ SİSTEMLERİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">3/SET</td>
+                                <td class="px-4 py-3 uppercase">3</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(7)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-7" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">ENERJİ A.Ş.</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100007017</td>
+                                        <td class="px-4 py-3 uppercase">300,000.00</td>
+                                        <td class="px-4 py-3 uppercase">380,000.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">2</td>
+                                        <td class="px-4 py-3 uppercase">GÜNEŞ TEKNOLOJİ</td>
+                                        <td class="px-4 py-3 uppercase">GIB202108000018</td>
+                                        <td class="px-4 py-3 uppercase">450,000.00</td>
+                                        <td class="px-4 py-3 uppercase">480,000.00</td>
+                                        <td class="px-4 py-3 uppercase">SOS SİSTEMİNDE</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="8" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">8</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(8)">
+                                  <i class="ki-filled ki-abstract-18 text-primary text-base mr-2 fw-bolder"></i> KOMPRESÖR SİSTEMLERİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">3/SET</td>
+                                <td class="px-4 py-3 uppercase">2</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(8)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-8" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">KOMPRESÖR A.Ş.</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100070019</td>
+                                        <td class="px-4 py-3 uppercase">670,000.00</td>
+                                        <td class="px-4 py-3 uppercase">610,000.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">2</td>
+                                        <td class="px-4 py-3 uppercase">DELTA SİSTEMLERİ</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100080020</td>
+                                        <td class="px-4 py-3 uppercase">770,000.00</td>
+                                        <td class="px-4 py-3 uppercase">720,000.00</td>
+                                        <td class="px-4 py-3 uppercase">SOS SİSTEMİNDE</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="9" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">9</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(9)">
+                                  <i class="ki-filled ki-abstract-18 text-primary text-base mr-2 fw-bolder"></i> OTOMASYON SİSTEMLERİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">1/ADET</td>
+                                <td class="px-4 py-3 uppercase">1</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(9)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-9" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">OTOMOTİV A.Ş.</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100070021</td>
+                                        <td class="px-4 py-3 uppercase">870,000.00</td>
+                                        <td class="px-4 py-3 uppercase">820,000.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">2</td>
+                                        <td class="px-4 py-3 uppercase">ABC TEKNOLOJİ</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100800022</td>
+                                        <td class="px-4 py-3 uppercase">900,000.00</td>
+                                        <td class="px-4 py-3 uppercase">980,000.00</td>
+                                        <td class="px-4 py-3 uppercase">SOS SİSTEMİNDE</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer justify-center">
+                      <div class="pagination">
+                        <button class="btn" disabled="">
+                          <i class="ki-outline ki-black-left"></i>
+                        </button>
+                        <button class="btn active"> 1 </button>
+                        <button class="btn"> 2 </button>
+                        <button class="btn"> 3 </button>
+                        <button class="btn">
+                          <i class="ki-outline ki-black-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script>
+                function toggleDetails(id) {
+                  const detailRow = document.getElementById(`details-${id}`);
+                  detailRow.style.display = detailRow.style.display === 'none' ? 'table-row' : 'none';
+                }
+              </script>
+              <!-- end: grid -->
+              <!-- begin: grid -->
+              <div id="tamamlanan" class="grid lg:grid-cols-3 lg:gap-4 items-stretch">
+                <div class="lg:col-span-3">
+                  <div class="card h-full w-full">
+                    <div class="card-body px-5 pt-5">
+                      <div class="flex flex-col justify-center gap-7">
+                        <h1 class="font-bold text-xl text-gray-600 border-b border-b-gray-200 px-3 pt-3 card-title">Tamamlanan</h1>
+                        <div class="table-container container mx-auto px-3">
+                          <table id="baslikTable" class="w-full border-collapse mb-5">
+                            <thead>
+                              <tr class="text-left bg-gray-200 text-md text-gray-600">
+                                <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                <th class="px-4 py-3 uppercase font-semibold">BAŞLIK</th>
+                                <th class="px-4 py-3 uppercase font-semibold">BAŞVURU MİK.</th>
+                                <th class="px-4 py-3 uppercase font-semibold">GERÇEKLEŞEN MİK.</th>
+                                <th class="px-4 py-3"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr data-id="10" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">1</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(10)">
+                                  <i class="ki-solid ki-check text-success text-base mr-2 fw-bolder"></i> TARTIM SİSTEMLERİ DONANIMI
+                                </td>
+                                <td class="px-4 py-3 uppercase">5/ADET</td>
+                                <td class="px-4 py-3 uppercase">5</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(10)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-10" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse bg-white shadow-md">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">DEF</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100070054</td>
+                                        <td class="px-4 py-3 uppercase">400,000.00</td>
+                                        <td class="px-4 py-3 uppercase">484,079.51</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">2</td>
+                                        <td class="px-4 py-3 uppercase">GAMA MAKİNA</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100800055</td>
+                                        <td class="px-4 py-3 uppercase">350,070.00</td>
+                                        <td class="px-4 py-3 uppercase">372,000.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="11" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-1100 transition-colors">
+                                <td class="px-4 py-3 uppercase">2</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(11)">
+                                  <i class="ki-solid ki-check text-success text-base mr-2 fw-bolder"></i> KURUTMA KULE GÖVDESİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">2/SET</td>
+                                <td class="px-4 py-3 uppercase">1</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(11)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-11" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="bg-gray-100 text-left text-base">
+                                        <th class="px-4 py-3 font-semibold uppercase">NO</th>
+                                        <th class="px-4 py-3 font-semibold uppercase">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 font-semibold uppercase">FATURA NO</th>
+                                        <th class="px-4 py-3 font-semibold uppercase">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 font-semibold uppercase">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 font-semibold uppercase">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">DHM MÜHENDİSLİK</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100070007</td>
+                                        <td class="px-4 py-3 uppercase">130,080.00</td>
+                                        <td class="px-4 py-3 uppercase">114,475.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="12" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">3</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(12)">
+                                  <i class="ki-solid ki-check text-success text-base mr-2 fw-bolder"></i> TARTIM ÜNİTESİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">6/ADET</td>
+                                <td class="px-4 py-3 uppercase">6</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(12)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-12" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="bg-gray-100 text-left text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">GAMA MÜHENDİSLİK</td>
+                                        <td class="px-4 py-3 uppercase">GIB202111110007</td>
+                                        <td class="px-4 py-3 uppercase">130,080.00</td>
+                                        <td class="px-4 py-3 uppercase">114,495.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="13" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">4</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(13)">
+                                  <i class="ki-solid ki-check text-success text-base mr-2 fw-bolder"></i> TOZ ÜRETİM KULE NOZUL SİSTEMİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">7/SET</td>
+                                <td class="px-4 py-3 uppercase">6</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(13)">DETAY</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-13" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="bg-gray-100 text-left text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">KAPA PASLANMAZ</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100080207</td>
+                                        <td class="px-4 py-3 uppercase">160,070.00</td>
+                                        <td class="px-4 py-3 uppercase">115,485.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">2</td>
+                                        <td class="px-4 py-3 uppercase">OTOMOTİV A.Ş.</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100088009</td>
+                                        <td class="px-4 py-3 uppercase">550,000.00</td>
+                                        <td class="px-4 py-3 uppercase">600,080.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="14" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">5</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(14)">
+                                  <i class="ki-solid ki-check text-success text-base mr-2 fw-bolder"></i> KONTROL PANELİ SİSTEMLERİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">2/ADET</td>
+                                <td class="px-4 py-3 uppercase">1</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(14)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-14" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">KONT A.Ş.</td>
+                                        <td class="px-4 py-3 uppercase">GIB202108800013</td>
+                                        <td class="px-4 py-3 uppercase">300,000.00</td>
+                                        <td class="px-4 py-3 uppercase">310,700.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="15" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">6</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(15)">
+                                  <i class="ki-solid ki-check text-success text-base mr-2 fw-bolder"></i> SENSÖR SİSTEMLERİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">8/ADET</td>
+                                <td class="px-4 py-3 uppercase">8</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(15)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-15" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">TEKNİK ELEKTRONİK</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100770015</td>
+                                        <td class="px-4 py-3 uppercase">500,020.00</td>
+                                        <td class="px-4 py-3 uppercase">510,800.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="16" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">7</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(16)">
+                                  <i class="ki-solid ki-check text-success text-base mr-2 fw-bolder"></i> ENERJİ SİSTEMLERİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">3/SET</td>
+                                <td class="px-4 py-3 uppercase">3</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(16)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-16" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">ENERJİ A.Ş.</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100700017</td>
+                                        <td class="px-4 py-3 uppercase">300,070.00</td>
+                                        <td class="px-4 py-3 uppercase">310,090.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="17" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">8</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(17)">
+                                  <i class="ki-solid ki-check text-success text-base mr-2 fw-bolder"></i> KOMPRESÖR SİSTEMLERİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">3/SET</td>
+                                <td class="px-4 py-3 uppercase">2</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(17)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-17" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">KOMPRESÖR A.Ş.</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100700019</td>
+                                        <td class="px-4 py-3 uppercase">600,700.00</td>
+                                        <td class="px-4 py-3 uppercase">610,000.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="18" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">9</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(18)">
+                                  <i class="ki-solid ki-check text-success text-base mr-2 fw-bolder"></i> OTOMASYON SİSTEMLERİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">1/ADET</td>
+                                <td class="px-4 py-3 uppercase">1</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(18)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-18" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">1</td>
+                                        <td class="px-4 py-3 uppercase">OTOMASYON A.Ş.</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100005021</td>
+                                        <td class="px-4 py-3 uppercase">880,000.00</td>
+                                        <td class="px-4 py-3 uppercase">820,000.00</td>
+                                        <td class="px-4 py-3 uppercase">Süreç Tamamlandı</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer justify-center">
+                      <div class="pagination">
+                        <button class="btn" disabled="">
+                          <i class="ki-outline ki-black-left"></i>
+                        </button>
+                        <button class="btn active"> 1 </button>
+                        <button class="btn"> 2 </button>
+                        <button class="btn"> 3 </button>
+                        <button class="btn">
+                          <i class="ki-outline ki-black-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script>
+                function toggleDetails(id) {
+                  const detailRow = document.getElementById(`details-${id}`);
+                  detailRow.style.display = detailRow.style.display === 'none' ? 'table-row' : 'none';
+                }
+              </script>
+              <!-- end: grid -->
+              <!-- begin: grid -->
+              <div id="devam-eden" class="grid lg:grid-cols-3 lg:gap-4 items-stretch">
+                <div class="lg:col-span-3">
+                  <div class="card h-full w-full">
+                    <div class="card-body px-5 pt-5">
+                      <div class="flex flex-col justify-center gap-7">
+                        <h1 class="font-bold text-xl text-gray-600 border-b border-b-gray-200 px-3 pt-3 card-title">Devam Eden</h1>
+                        <div class="table-container container mx-auto px-3">
+                          <table id="baslikTable" class="w-full border-collapse mb-5">
+                            <thead>
+                              <tr class="text-left bg-gray-200 text-md text-gray-600">
+                                <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                <th class="px-4 py-3 uppercase font-semibold">BAŞLIK</th>
+                                <th class="px-4 py-3 uppercase font-semibold">BAŞVURU MİK.</th>
+                                <th class="px-4 py-3 uppercase font-semibold">GERÇEKLEŞEN MİK.</th>
+                                <th class="px-4 py-3"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr data-id="19" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">1</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(19)">
+                                  <i class="ki-filled ki-abstract-18 text-primary text-base mr-2 fw-bolder"></i> TARTIM SİSTEMLERİ DONANIMI
+                                </td>
+                                <td class="px-4 py-3 uppercase">5/ADET</td>
+                                <td class="px-4 py-3 uppercase">5</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(19)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-19" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse bg-white shadow-md">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">3</td>
+                                        <td class="px-4 py-3 uppercase">LAMDA TEKNOLOJİ</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100000756</td>
+                                        <td class="px-4 py-3 uppercase">480,000.00</td>
+                                        <td class="px-4 py-3 uppercase">467,000.00</td>
+                                        <td class="px-4 py-3 uppercase">SOS SİSTEMİNDE</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="20" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">2</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(20)">
+                                  <i class="ki-filled ki-abstract-18 text-primary text-base mr-2 fw-bolder"></i> KURUTMA KULE GÖVDESİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">2/SET</td>
+                                <td class="px-4 py-3 uppercase">1</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(20)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-20" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="bg-gray-100 text-left text-base">
+                                        <th class="px-4 py-3 font-semibold uppercase">NO</th>
+                                        <th class="px-4 py-3 font-semibold uppercase">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 font-semibold uppercase">FATURA NO</th>
+                                        <th class="px-4 py-3 font-semibold uppercase">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 font-semibold uppercase">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 font-semibold uppercase">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">2</td>
+                                        <td class="px-4 py-3 uppercase">OMEGA MÜHENDİSLİK</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100700008</td>
+                                        <td class="px-4 py-3 uppercase">150,000.00</td>
+                                        <td class="px-4 py-3 uppercase">169,000.00</td>
+                                        <td class="px-4 py-3 uppercase">SOS SİSTEMİNDE</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="21" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">3</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(21)">
+                                  <i class="ki-filled ki-abstract-18 text-primary text-base mr-2 fw-bolder"></i> TARTIM ÜNİTESİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">6/ADET</td>
+                                <td class="px-4 py-3 uppercase">6</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(21)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-21" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="bg-gray-100 text-left text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">2</td>
+                                        <td class="px-4 py-3 uppercase">BETA MÜHENDİSLİK</td>
+                                        <td class="px-4 py-3 uppercase">GIB202107256708</td>
+                                        <td class="px-4 py-3 uppercase">140,000.00</td>
+                                        <td class="px-4 py-3 uppercase">167,000.00</td>
+                                        <td class="px-4 py-3 uppercase">SOS SİSTEMİNDE</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="22" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">6</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(22)">
+                                  <i class="ki-filled ki-abstract-18 text-primary text-base mr-2 fw-bolder"></i> SENSÖR SİSTEMLERİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">8/ADET</td>
+                                <td class="px-4 py-3 uppercase">8</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(22)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-22" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">2</td>
+                                        <td class="px-4 py-3 uppercase">SENSÖR AŞ.</td>
+                                        <td class="px-4 py-3 uppercase">GIB202107700016</td>
+                                        <td class="px-4 py-3 uppercase">680,000.00</td>
+                                        <td class="px-4 py-3 uppercase">630,000.00</td>
+                                        <td class="px-4 py-3 uppercase">SOS SİSTEMİNDE</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="23" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">7</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(23)">
+                                  <i class="ki-filled ki-abstract-18 text-primary text-base mr-2 fw-bolder"></i>ENERJİ SİSTEMLERİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">3/SET</td>
+                                <td class="px-4 py-3 uppercase">3</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(23)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-23" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">2</td>
+                                        <td class="px-4 py-3 uppercase">GÜNEŞ TEKNOLOJİ</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100770018</td>
+                                        <td class="px-4 py-3 uppercase">458,000.00</td>
+                                        <td class="px-4 py-3 uppercase">469,000.00</td>
+                                        <td class="px-4 py-3 uppercase">SOS SİSTEMİNDE</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="24" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">8</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(24)">
+                                  <i class="ki-filled ki-abstract-18 text-primary text-base mr-2 fw-bolder"></i> KOMPRESÖR SİSTEMLERİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">3/SET</td>
+                                <td class="px-4 py-3 uppercase">2</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(24)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-24" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">2</td>
+                                        <td class="px-4 py-3 uppercase">DELTA SİSTEMLERİ</td>
+                                        <td class="px-4 py-3 uppercase">GIB202107700020</td>
+                                        <td class="px-4 py-3 uppercase">720,000.00</td>
+                                        <td class="px-4 py-3 uppercase">720,000.00</td>
+                                        <td class="px-4 py-3 uppercase">SOS SİSTEMİNDE</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr data-id="25" class="border-t border-gray-300 bg-gray-700 hover:bg-gray-200 transition-colors">
+                                <td class="px-4 py-3 uppercase">9</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(25)">
+                                  <i class="ki-filled ki-abstract-18 text-primary text-base mr-2 fw-bolder"></i> OTOMASYON SİSTEMLERİ
+                                </td>
+                                <td class="px-4 py-3 uppercase">1/ADET</td>
+                                <td class="px-4 py-3 uppercase">1</td>
+                                <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary" onclick="toggleDetails(25)">Detay</td>
+                              </tr>
+                              <tr class="hidden-row" id="details-25" style="display: none;">
+                                <td colspan="5">
+                                  <table class="w-full border-collapse">
+                                    <thead>
+                                      <tr class="text-left bg-gray-100 text-base">
+                                        <th class="px-4 py-3 uppercase font-semibold">NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">TEDARİKÇİ</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">FATURA NO</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">BAŞVURU TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">GERÇEK TOP. TUT.</th>
+                                        <th class="px-4 py-3 uppercase font-semibold">DURUM</th>
+                                        <th class="px-4 py-3"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="border-t border-gray-100">
+                                        <td class="px-4 py-3 uppercase">2</td>
+                                        <td class="px-4 py-3 uppercase">ELEKTRONİK TEKNOLOJİ</td>
+                                        <td class="px-4 py-3 uppercase">GIB202100088022</td>
+                                        <td class="px-4 py-3 uppercase">920,000.00</td>
+                                        <td class="px-4 py-3 uppercase">920,000.00</td>
+                                        <td class="px-4 py-3 uppercase">SOS SİSTEMİNDE</td>
+                                        <td class="px-4 py-3 uppercase cursor-pointer hover:text-primary">
+                                          <a href="">DETAY</a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer justify-center">
+                      <div class="pagination">
+                        <button class="btn" disabled="">
+                          <i class="ki-outline ki-black-left"></i>
+                        </button>
+                        <button class="btn active"> 1 </button>
+                        <button class="btn"> 2 </button>
+                        <button class="btn"> 3 </button>
+                        <button class="btn">
+                          <i class="ki-outline ki-black-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script>
+                function toggleDetails(id) {
+                  const detailRow = document.getElementById(`details-${id}`);
+                  detailRow.style.display = detailRow.style.display === 'none' ? 'table-row' : 'none';
+                }
+              </script>
+              <!-- end: grid -->
+              <!-- begin: grid -->
+              <div id="yenikayit" class="grid lg:grid-cols-3 lg:gap-4 items-stretch">
+                <div class="lg:col-span-3">
+                  <div class="card h-full w-full">
+                    <div class="card-body px-5 pt-5">
+                      <div class="flex flex-col justify-center gap-2">
+                        <h1 class="font-bold text-xl text-gray-600 border-b border-b-gray-200 px-3.5 card-title">Yeni Kayıt</h1>
+                        <form class="grid grid-cols-4 gap-7 px-4 py-4">
+                          <div class="flex flex-col col-span-3">
+                            <label for="baslik" class="text-sm font-medium">Başlık</label>
+                            <div class="flex gap-2">
+                              <input id="baslik" type="text" class="border bg-gray-100 p-2 w-4/5">
+                              <select name="ithal" id="ithal" class="border bg-gray-100 p-2 w-1/5">
+                                <option value="adet" selected>İthal</option>
+                                <option value="set">İthal Değil</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="flex flex-col col-span-1">
+                            <label for="satno" class="text-sm font-medium">SAT No</label>
+                            <input type="text" id="satno" class="border bg-gray-100 p-2">
+                          </div>
+                          <div class="flex flex-col col-span-1">
+                            <label for="sasno" class="text-sm font-medium">SAS No</label>
+                            <input type="text" id="sasno" class="border bg-gray-100 p-2">
+                          </div>
+                          <div class="flex flex-col col-span-1">
+                            <label for="onaytarih" class="text-sm font-medium">Başvuru Onay Tarihi</label>
+                            <input type="date" id="onaytarih" class="border bg-gray-100 p-2">
+                          </div>
+                          <div class="flex flex-col col-span-1">
+                            <label for="faturatarih" class="text-sm font-medium">Fatura Tarihi</label>
+                            <input type="date" id="faturatarih" class="border bg-gray-100 p-2">
+                          </div>
+                          <div class="flex flex-col col-span-1">
+                            <label for="basvuru" class="text-sm font-medium">Başvuru Miktarı</label>
+                            <div class="flex gap-2">
+                              <input id="basvuru" type="text" class="border bg-gray-100 p-2 w-3/5" placeholder="Miktar">
+                              <select name="basvuru" id="basvuru-select" class="border bg-gray-100 p-2 w-2/5">
+                                <option value="adet" selected>Adet</option>
+                                <option value="set">Set</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="flex flex-col col-span-1">
+                            <label for="basvurututar" class="text-sm font-medium">Başvuru Birim Tutarı</label>
+                            <input type="text" id="basvurututar" class="border bg-gray-100 p-2">
+                          </div>
+                          <div class="flex flex-col col-span-1">
+                            <label for="kdv" class="text-sm font-medium">KDV Oranı</label>
+                            <input type="text" id="kdv" class="border bg-gray-100 p-2">
+                          </div>
+                          <div class="flex flex-col col-span-1">
+                            <label for="toplamtutar" class="text-sm font-medium">Toplam Tutar</label>
+                            <input type="text" id="toplamtutar" class="border bg-gray-100 p-2">
+                          </div>
+                          <div class="flex flex-col col-span-1">
+                            <label for="durum" class="text-sm font-medium">Durum</label>
+                            <select name="durum" id="durum" class="border bg-gray-100 p-2">
+                              <option value="yes">Süreç Tamamlandı</option>
+                              <option value="no" selected>Süreç Tamamlanmadı</option>
+                            </select>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="card-footer justify-end">
+                      <button class="btn btn-light" type="button" onclick="toggleFatura()">
+                        <div class="text-sm"> Fatura Ekle </div>
+                        <i class="ki-solid ki-abstract-10"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end: grid -->
+              <!-- begin: grid -->
+              <div id="fatura" class="grid lg:grid-cols-3 lg:gap-4 justify-center items-stretch hidden">
+                <div class="lg:col-span-3">
+                  <div class="flex justify-center">
+                    <div class="card h-4/5 w-4/5 mx-auto">
+                      <div class="card-body px-5 pt-5">
+                        <div class="flex flex-col justify-center gap-2">
+                          <h1 class="font-bold text-xl text-gray-600 border-b border-b-gray-200 px-3.5 card-title">Fatura ve Satın Alma Bilgileri</h1>
+                          <form id="fatura-form" class="grid grid-cols-4 gap-7 px-4 py-4">
+                            <div class="flex flex-col col-span-2">
+                              <label for="unvan" class="text-sm font-medium">Firma Ünvanı</label>
+                              <input type="text" id="unvan" class="border bg-gray-100 p-2">
+                            </div>
+                            <div class="flex flex-col col-span-1">
+                              <label for="sap" class="text-sm font-medium">Firma SAP Kodu</label>
+                              <input type="text" id="sap" class="border bg-gray-100 p-2">
+                            </div>
+                            <div class="flex flex-col col-span-1">
+                              <label for="vkn" class="text-sm font-medium">Firma VKN</label>
+                              <input type="text" id="vkn" class="border bg-gray-100 p-2">
+                            </div>
+                            <div class="flex flex-col col-span-1">
+                              <label for="email" class="text-sm font-medium">Firma E-mail</label>
+                              <input type="text" id="email" class="border bg-gray-100 p-2">
+                            </div>
+                            <div class="flex flex-col col-span-1">
+                              <label for="faturano" class="text-sm font-medium">Fatura No</label>
+                              <input type="text" id="faturano" class="border bg-gray-100 p-2">
+                            </div>
+                            <div class="flex flex-col col-span-1">
+                              <label for="html" class="text-sm font-medium">Fatura HTML</label>
+                              <input type="file" id="html" class="border bg-gray-100 p-2">
+                            </div>
+                            <div class="flex flex-col col-span-1">
+                              <label for="xml" class="text-sm font-medium">Fatura XML</label>
+                              <input type="file" id="xml" class="border bg-gray-100 p-2">
+                            </div>
+                            <div class="flex flex-col col-span-1">
+                              <label for="teslim" class="text-sm font-medium">Muhasebe Fatura Teslimi</label>
+                              <select name="teslim" id="teslim" class="border bg-gray-100 p-2">
+                                <option value="yes">Teslim Edildi</option>
+                                <option value="no" selected>Teslim Edilmedi</option>
+                              </select>
+                            </div>
+                            <div class="flex flex-col col-span-1">
+                              <label for="gerceklesen" class="text-sm font-medium">Gerçekleşen Miktar</label>
+                              <div class="flex gap-2">
+                                <input id="gerceklesen" type="text" class="border bg-gray-100 p-2 w-3/5" placeholder="Miktar">
+                                <select name="gerceklesen" id="gerceklesen" class="border bg-gray-100 p-2 w-2/5">
+                                  <option value="adet">Adet</option>
+                                  <option value="set" selected>Set</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="flex flex-col col-span-1">
+                              <label for="gercek-tutar" class="text-sm font-medium">Gerçekleşen Fat. Tutarı</label>
+                              <input type="text" id="gercek-tutar" class="border bg-gray-100 p-2">
+                            </div>
+                            <div class="flex flex-col col-span-1">
+                              <label for="etuys-mail" class="text-sm font-medium">Etuys Mail Gönderimi</label>
+                              <select name="etuys-mail" id="etuys-mail" class="border bg-gray-100 p-2">
+                                <option value="yes">Mail Gönderildi</option>
+                                <option value="no" selected>Mail Gönderilmedi</option>
+                              </select>
+                            </div>
+                            <div class="flex flex-col col-span-1">
+                              <label for="etuys-xml" class="text-sm font-medium">Etuys Xml Yükleme</label>
+                              <select name="etuys-xml" id="etuys-xml" class="border bg-gray-100 p-2">
+                                <option value="yes">Yüklendi</option>
+                                <option value="no" selected>Yüklenmedi</option>
+                              </select>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="card-footer justify-center">
+                        <div class="flex justify-end gap-2">
+                          <button type="reset" class="btn btn-light bg-danger text-white p-2 rounded" form="fatura-form">Sıfırla</button>
+                          <button type="submit" class="btn btn-light bg-blue-300 text-white p-2 rounded" form="fatura-form">Kaydet</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end: grid -->
+              <script>
+                function toggleFatura() {
+                  const faturaElement = document.getElementById('fatura');
+                  faturaElement.classList.toggle('hidden');
+                  if (!faturaElement.classList.contains('hidden')) {
+                    faturaElement.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                  }
+                }
+              </script>
+              <!-- begin: grid -->
+              <div id="kayit-tartim-sigma" class="grid grid-cols-1 xl:grid-cols-4 gap-1 lg:gap-2">
+                <div class="col-span-2 flex flex-col">
+                  <div class="grid gap-5 lg:gap-7.5 grow">
+                    <div class="card min-w-full flex flex-col h-full">
+                      <div class="card-header">
+                        <h3 class="card-title text-gray-700"> Kayıt </h3>
+                      </div>
+                      <div class="card-body grid grid-cols-2 gap-x-4 pb- lg:pb-4">
+                        <div class="flex flex-col pr-4">
+                          <table class="table align-middle text-sm text-gray-500 w-full border-collapse">
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Başlık</td>
+                              <td class="py-3 text-gray-700 font-normal border-0">TARTIM SİSTEMLERİ DONANIMI</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0"></td>
+                              <td class="py-3 text-gray-700 font-normal border-0">İthal</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">SAT No</td>
+                              <td class="py-3 text-gray-700 font-normal border-0">SAT12345</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">SAS No</td>
+                              <td class="py-3 text-gray-700 font-normal border-0">1234567890</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Başvuru Onay Tarihi</td>
+                              <td class="py-3 text-red-500 font-normal border-0">Belirtilmemiş</td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="flex flex-col pr-4">
+                          <table class="table align-middle text-sm text-gray-500 w-full border-collapse">
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Fatura Tarihi</td>
+                              <td class="py-3 text-gray-700 font-normal border-0">12.11.2021</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Başvuru Miktarı</td>
+                              <td class="py-3 text-gray-700 font-normal border-0">2 Adet</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Başvuru Birim Tutarı</td>
+                              <td class="py-3 text-gray-700 font-normal border-0">400,086.00</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">KDV Oranı (%)</td>
+                              <td class="py-3 text-gray-700 font-normal border-0">20</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Toplam Tutar</td>
+                              <td class="py-3 text-gray-700 font-normal border-0">400,086.00</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Durum</td>
+                              <td class="py-3 text-green-600 font-normal border-0">Süreç Tamamlandı</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-2 flex flex-col">
+                  <div class="grid gap-5 lg:gap-7.5 grow">
+                    <div class="card min-w-full flex flex-col h-full">
+                      <div class="card-header">
+                        <h3 class="card-title text-gray-700"> Fatura ve Satın Alma Bilgileri </h3>
+                      </div>
+                      <div class="card-body grid grid-cols-2 gap-x-4 pb- lg:pb-4">
+                        <div class="flex flex-col pr-4">
+                          <table class="table align-middle text-sm text-gray-500 w-full border-collapse">
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Firma Ünvanı</td>
+                              <td class="py-3 text-gray-700 font-normal border-0">SİGMA</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Firma SAP Kodu</td>
+                              <td class="py-3 text-gray-700 font-normal border-0">123456789</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Firma VKN</td>
+                              <td class="py-3 text-gray-700 font-normal border-0">2220234585</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Firma E-mail</td>
+                              <td class="py-3 text-red-500 font-normal border-0">Belirtilmemiş</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Fatura No</td>
+                              <td class="py-3 text-gray-700 font-normal border-0">GIB2021000000078</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Fatura HTML</td>
+                              <td class="py-3 text-red-500 font-normal border-0">Görüntüle/İndir</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Fatura XML</td>
+                              <td class="py-3 text-red-500 font-normal border-0">Görüntüle/İndir</td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="flex flex-col pr-4">
+                          <table class="table align-middle text-sm text-gray-500 w-full border-collapse">
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Başvuru XML</td>
+                              <td class="py-3 text-red-500 font-normal border-0">Görüntüle/İndir</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Muhasebe Fatura Teslimi</td>
+                              <td class="py-3 text-green-600 font-normal border-0">Teslim Edildi</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Gerçekleşen Miktar</td>
+                              <td class="py-3 text-gray-700 font-normal border-0">2 Adet</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Gerçekleşen Fat. Tutarı</td>
+                              <td class="py-3 text-gray-700 font-normal border-0">584,059.61</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Etuys Mail Gönderimi</td>
+                              <td class="py-3 text-green-600 font-normal border-0">Mail Gönderildi</td>
+                            </tr>
+                            <tr>
+                              <td class="py-3 text-gray-600 font-normal border-0">Etuys Xml Yükleme</td>
+                              <td class="py-3 text-green-600 font-normal border-0">Yüklendi</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end: grid -->
+            </div>
+          </div>
+          <!-- End of Container -->
+          <!-- Footer -->
+          <footer class="footer">
+            <!-- Container -->
+            <div class="container-fixed">
+              <div class="flex flex-col md:flex-row justify-center md:justify-between items-center gap-3 py-5">
+                <div class="flex order-2 md:order-1 gap-2 font-normal text-2sm">
+                  <span class="text-gray-500"> 2024© </span>
+                  <a class="text-gray-600 hover:text-primary" href="main-page.html"> Software Solutions by Company </a>
+                </div>
+                <nav class="flex order-1 md:order-2 gap-4 font-normal text-2sm text-gray-600">
+                  <a class="hover:text-primary" href="main-page.html"> Hakkında </a>
+                  <a class="hover:text-primary" href="main-page.html"> Yasal </a>
+                  <a class="hover:text-primary" href="main-page.html"> Gizlilik </a>
+                </nav>
+              </div>
+            </div>
+            <!-- End of Container -->
+          </footer>
+          <!-- End of Footer -->
+        </main>
+        <!-- End of Content -->
+      </div>
+      <!-- End of Wrapper Container-->
+    </div>
+    <!-- End of Main -->
+    </div>
+    <!-- End of Page -->
+    <!-- Scripts -->
+    <script src="assets/js/core.bundle.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/js/widgets/general.js"></script>
+    <!-- End of Scripts -->
+  </body>
+</html>

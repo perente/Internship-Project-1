@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="h-full" data-theme="true" data-theme-mode="light" lang="en">
+  <head>
+    <base href="../../../../../">
+    <title>Company - Kurumsal Uygulamalar</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="main-page.html" property="og:url" />
+    <meta content="en_US" property="og:locale" />
+    <meta content="website" property="og:type" />
+    <meta content="" property="og:description" />
+    <link href="random-logo.avif" rel="shortcut icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="assets/vendors/apexcharts/apexcharts.css" rel="stylesheet" />
+    <link href="assets/vendors/keenicons/styles.bundle.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+  </head>
+  <body class="antialiased flex h-full text-base text-gray-700 [--tw-page-bg-dark:var(--tw-coal-500)] [--tw-header-height:78px] [--tw-navbar-bg:var(--tw-secondary-active)] [--tw-navbar-bg-dark:var(--tw-coal-300)] bg-light dark:bg-coal-500">
+    <!-- Theme Mode -->
+    <script>
+      const defaultThemeMode = 'light'; // light|dark|system
+      let themeMode;
+      if (document.documentElement) {
+        if (localStorage.getItem('theme')) {
+          themeMode = localStorage.getItem('theme');
+        } else if (document.documentElement.hasAttribute('data-theme-mode')) {
+          themeMode = document.documentElement.getAttribute('data-theme-mode');
+        } else {
+          themeMode = defaultThemeMode;
+        }
+        if (themeMode === 'system') {
+          themeMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.classList.add(themeMode);
+      }
+    </script>
+    <!-- End of Theme Mode -->
+    <!-- Page -->
+    <!-- Main -->
+    <div class="flex grow flex-col [[data-sticky-header=on]_&amp;]:pt-[--tw-header-height]">
+      <!-- Header -->
+      <header class="flex items-center transition-[height] shrink-0 bg-[--tw-header-bg] dark:bg-coal-500 h-[--tw-header-height] border-y border-gray-300 dark:border-b-light dark:border-light mb-5 lg:mb-8" data-sticky="true" data-sticky-class="transition-[height] fixed z-10 top-0 left-0 right-0 shadow-sm backdrop-blur-md bg-white/70 dark:bg-coal-500/70 dark:border-b dark:border-b-light" data-sticky-name="header" data-sticky-offset="100px" id="header">
+        <!-- Container -->
+        <div class="container-fixed flex lg:justify-between items-center gap-2.5">
+          <!-- Logo -->
+          <div class="flex items-center gap-1 lg:w-[400px] grow lg:grow-0">
+            <div class="flex items-center">
+              <a href="main-page.html">
+                <img class="dark:hidden pr-4 h-12 min-h-[16px] w-auto" src="random-logo.avif" />
+                <img class="hidden dark:inline-block min-h-[16px] max-h-[75px] max-w-[75px] mr-6" src="random-logo.avif" />
+              </a>
+              <a href="main-page.html">
+                <h3 class="text-gray-900 text-lg font-medium md:block"> Company </h3>
+              </a>
+            </div>
+          </div>
+          <!-- End of Logo -->
+          <!-- Topbar -->
+          <div class="flex items-center gap-2 lg:gap-3.5 lg:w-[400px] justify-end" id="top-bar">
+            <div class="flex items-center gap-2 me-0.5">
+              <div class="menu" data-menu="true">
+                <div class="menu-item" data-menu-item-offset="-7px, 10px" data-menu-item-placement="bottom-end" data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
+                  <button class="menu-toggle btn btn-icon btn-icon-base btn-sm text-gray-600 hover:text-primary dropdown-open:text-primary">
+                    <i class="ki-filled ki-profile-circle"></i>
+                  </button>
+                  <div class="menu-dropdown menu-default light:border-gray-300 w-screen max-w-[250px]">
+                    <div class="flex items-center justify-between px-3 py-1.5 gap-1.5">
+                      <div class="flex items-center gap-2">
+                        <img alt="" class="size-9 rounded-full" src="profile.jpg">
+                        <div class="flex flex-col gap-1.5">
+                          <span class="text-sm text-gray-800 font-semibold leading-none"> Master Admin </span>
+                          <a class="text-xs text-gray-600 hover:text-primary font-medium leading-none" href="user-profile.html"> masteradmin@company.com.tr </a>
+                        </div>
+                        </img>
+                      </div>
+                    </div>
+                    <div class="menu-separator"></div>
+                    <div class="flex flex-col">
+                      <div class="menu-item mb-0.5">
+                        <div class="menu-link">
+                          <span class="menu-icon">
+                            <i class="ki-filled ki-moon"></i>
+                          </span>
+                          <span class="menu-title"> Koyu Tema </span>
+                          <label class="switch switch-sm">
+                            <input data-theme-state="dark" data-theme-toggle="true" name="check" type="checkbox" value="1" />
+                          </label>
+                        </div>
+                      </div>
+                      <div class="menu-item px-4 py-1.5">
+                        <a class="btn btn-sm btn-light justify-center" href="sign-in.html"> Çıkış yap </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu" data-menu="true">
+              <div class="menu-item" data-menu-item-offset="0, 10px" data-menu-item-placement="bottom-end" data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
+                <button class="menu-toggle btn btn-sm btn-dark"> Master Admin <i class="ki-filled ki-down"></i>
+                </button>
+                <div class="menu-dropdown menu-default w-full max-w-[200px]" data-menu-dismiss="true">
+                  <div class="menu-item">
+                    <a class="menu-link" href="user-profile.html">
+                      <span class="menu-icon">
+                        <i class="ki-filled ki-profile-circle"></i>
+                      </span>
+                      <span class="menu-title"> Profilim </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of Topbar -->
+        </div>
+        <!-- End of Container -->
+      </header>
+      <!-- End of Header -->
+      <!-- Wrapper Container-->
+      <div class="container-fixed w-full flex px-0">
+        <!-- Content -->
+        <main class="flex flex-col grow" id="content" role="content">
+          <!-- Toolbar -->
+          <div class="mb-5 lg:mb-8">
+            <!-- Container -->
+            <div class="container-fixed flex items-center justify-between flex-wrap gap-5">
+              <div class="flex flex-col justify-center items-start flex-wrap gap-1 lg:gap-2">
+                <div class="input input-sm w-[36px] lg:w-60">
+                  <i class="ki-filled ki-magnifier"></i>
+                  <input class="min-w-0" placeholder="Arama | sat, sas, başlık" type="text" value="" />
+                </div>
+              </div>
+              <div class="flex items-center flex-wrap gap-1.5 lg:gap-3.5">
+                <div class="menu menu-default" data-menu="true">
+                  <div class="menu-item" data-menu-item-offset="0, 0" data-menu-item-placement="bottom-end" data-menu-item-toggle="dropdown" data-menu-item-trigger="hover">
+                    <button class="menu-toggle btn btn-light btn-sm flex-nowrap">
+                      <span class="flex items-center me-1">
+                        <i class="ki-filled ki-calendar !text-md"></i>
+                      </span>
+                      <span class="hidden md:inline text-nowrap"> Eylül, 2024 </span>
+                      <span class="inline md:hidden text-nowrap"> Eylül, 2024 </span>
+                      <span class="flex items-center lg:ms-4">
+                        <i class="ki-filled ki-down !text-xs"></i>
+                      </span>
+                    </button>
+                    <div class="menu-dropdown w-48 py-2 scrollable-y max-h-[250px]">
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Ocak, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Şubat, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Mart, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Nisan, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Mayıs, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Haziran, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Temmuz, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Ağustos, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item active">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Eylül, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Ekim, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Kasım, 2024 </span>
+                        </a>
+                      </div>
+                      <div class="menu-item">
+                        <a class="menu-link" href="#">
+                          <span class="menu-title"> Aralık, 2024 </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of Container -->
+          </div>
+          <!-- End of Toolbar -->
+          <!-- Container -->
+          <div class="container-fixed">
+            <!-- begin: grid -->
+            <div class="grid grid-cols-1 xl:grid-cols-4 gap-5 lg:gap-7.5">
+              <div class="col-span-3 flex flex-col">
+                <div class="grid gap-5 lg:gap-7.5 grow">
+                  <div class="card min-w-full flex flex-col h-full">
+                    <div class="card-header">
+                      <h3 class="card-title text-gray-700"> Profil Bilgilerim </h3>
+                    </div>
+                    <div class="card-body grid grid-cols-2 gap-x-4 pb-0 lg:pb-0">
+                      <div class="flex flex-col pr-4">
+                        <table class="table align-middle text-sm text-gray-500 w-full border-collapse">
+                          <tr>
+                            <td class="py-3 text-gray-600 font-normal border-0">Ad Soyad</td>
+                            <td class="py-3 text-gray-700 font-normal border-0">John Doe</td>
+                          </tr>
+                          <tr>
+                            <td class="py-3 text-gray-600 font-normal border-0">Şirket</td>
+                            <td class="py-3 text-gray-700 font-normal border-0">Elektronik A.Ş.</td>
+                          </tr>
+                          <tr>
+                            <td class="py-3 text-gray-600 font-normal border-0">Departman</td>
+                            <td class="py-3 text-red-500 font-normal border-0">Belirtilmemiş</td>
+                          </tr>
+                          <tr>
+                            <td class="py-3 text-gray-600 font-normal border-0">Unvan</td>
+                            <td class="py-3 text-red-500 font-normal border-0">Belirtilmemiş</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="flex flex-col pl-4">
+                        <table class="table align-middle text-sm text-gray-500 w-full border-collapse">
+                          <tr>
+                            <td class="py-3 text-gray-600 font-normal border-0">E-posta</td>
+                            <td class="py-3 text-gray-700 font-normal border-0">masteradmin@company.com.tr</td>
+                          </tr>
+                          <tr>
+                            <td class="py-3 text-gray-600 font-normal border-0">GSM Telefon</td>
+                            <td class="py-3 text-red-500 font-normal border-0">Belirtilmemiş</td>
+                          </tr>
+                          <tr>
+                            <td class="py-3 text-gray-600 font-normal border-0">Dahili Telefon</td>
+                            <td class="py-3 text-red-500 font-normal border-0">Belirtilmemiş</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-1 flex flex-col">
+                <div class="grid gap-5 lg:gap-7.5 grow">
+                  <div class="card min-w-full flex flex-col h-full">
+                    <div class="card-header">
+                      <h3 class="card-title text-gray-700"> Fotoğraf </h3>
+                    </div>
+                    <div class="card-body flex justify-center items-center grow">
+                      <img class="w-3/4 max-w-[250px] h-auto rounded-full object-cover" src="profile.jpg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end: grid -->
+          </div>
+          <!-- End of Container -->
+          <!-- Footer -->
+          <footer class="footer">
+            <!-- Container -->
+            <div class="container-fixed">
+              <div class="flex flex-col md:flex-row justify-center md:justify-between items-center gap-3 py-5">
+                <div class="flex order-2 md:order-1 gap-2 font-normal text-2sm">
+                  <span class="text-gray-500"> 2024© </span>
+                  <a class="text-gray-600 hover:text-primary" href="main-page.html"> Software Solutions by Company </a>
+                </div>
+                <nav class="flex order-1 md:order-2 gap-4 font-normal text-2sm text-gray-600">
+                  <a class="hover:text-primary" href="main-page.html"> Hakkında </a>
+                  <a class="hover:text-primary" href="main-page.html"> Yasal </a>
+                  <a class="hover:text-primary" href="main-page.html"> Gizlilik </a>
+                </nav>
+              </div>
+            </div>
+            <!-- End of Container -->
+          </footer>
+          <!-- End of Footer -->
+        </main>
+        <!-- End of Content -->
+      </div>
+      <!-- End of Wrapper Container-->
+    </div>
+    <!-- End of Main -->
+    </div>
+    <!-- End of Page -->
+    <!-- Scripts -->
+    <script src="assets/js/core.bundle.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
+    <!-- End of Scripts -->
+  </body>
+</html>
